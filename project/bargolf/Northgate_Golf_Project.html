@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link href="./GolfStylesheet.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+		
+		<script src="https://js.arcgis.com/4.6/"></script>
+	
+		<title>Northgate Map Project</title>
+		
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "200px";
+			}
+			function closeNav(){
+				document.getElementById("mySidenav").style.width = "0";
+			}
+			
+			//map & feature layers
+			require([
+				"esri/Map",
+			    "esri/views/MapView",
+			    "esri/layers/FeatureLayer",
+			    "dojo/domReady!"
+			], function(
+				Map, MapView, FeatureLayer
+			) {
+				var map = new Map({
+			    	basemap: "streets"
+			    	/*-night-vector depending on style*/
+			    });
+			    
+			    var view = new MapView({
+			        container: "NGMap",
+			        map: map,
+			        center: [-96.346537, 30.620659],
+			        zoom: 16
+			        
+			    });
+			    
+				var routeLayer = new FeatureLayer({
+					url: 'https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Route/FeatureServer',
+					visible: false
+        		});
+        		
+        		var routeLayer2 = new FeatureLayer({
+					url: 'https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/Route18/FeatureServer',
+					visible: false
+        		});
+        		
+			    map.add(routeLayer);
+			    map.add(routeLayer2);
+			    
+			    view.then(function(){
+				    
+					document.querySelector('#toggleRoute').addEventListener('click', function(){
+						if(OldLayer.visible == true){
+							routeLayer2.visible = false;
+							routeLayer.visible = !routeLayer.visible;
+						}
+						else {
+							routeLayer.visible = false;
+							routeLayer2.visible = !routeLayer2.visible;
+						}
+					})
+			    });
+			    
+			    var OldLayer = new FeatureLayer({
+			    	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/21_Bar_Data/FeatureServer",
+					visible: true,
+					
+					popupTemplate: {
+						title: "{name}",
+						actions: [{
+							id: "find",
+							image: "21.png",
+						}],	
+						content: [{
+							type: "fields",
+							fieldInfos: [{
+							/*	fieldName: "Name"
+							}, {*/
+								fieldName: "Age"
+							}, {
+								fieldName: "Hours"
+							}, {
+								fieldName: "Monday",
+								
+							}, {
+								fieldName: "Tuesday",
+								
+							}, {
+								fieldName: "Wednesday",
+								
+							}, {
+								fieldName: "Thursday",
+								
+							}, {
+								fieldName: "Friday",
+								
+							}, {
+								fieldName: "Saturday",
+								
+							}, {
+								fieldName: "Sunday",
+								
+							}]
+						}]
+					}
+				});
+				
+				var NewLayer = new FeatureLayer({
+			    	url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/18_Bar_Data/FeatureServer",
+					visible:false,
+					
+					popupTemplate: {
+						title: "{name}",
+						actions: [{
+							id: "find",
+							image: "183.png"
+						}],	
+						content: [{
+							type: "fields",
+							fieldInfos: [{
+							/*	fieldName: "Name"
+							}, {*/
+								fieldName: "Age"
+							}, {
+								fieldName: "Hours"
+							}, {
+								fieldName: "Monday"
+							}, {
+								fieldName: "Tuesday"
+							}, {
+								fieldName: "Wednesday"
+							}, {
+								fieldName: "Thursday"
+							}, {
+								fieldName: "Friday"
+							}, {
+								fieldName: "Saturday"
+							}, {
+								fieldName: "Sunday"
+							}]
+						}]
+					}
+				});
+				
+				
+				map.add(OldLayer);
+				map.add(NewLayer);
+				
+			    view.when(function() {
+				    var popup = view.popup;
+				    popup.viewModel.on("trigger-action", function(event) {
+				    	if (event.action.id === "find") {
+				        	var attributes = popup.viewModel.selectedFeature.attributes;
+				        	
+				    	}
+				    })
+				})
+				
+				view.then(function(){
+					//toggle age layers
+					document.querySelector('#toggleAge1').addEventListener('click', function(){
+						if(OldLayer.visible == true){
+							NewLayer.visible = !NewLayer.visible;
+							OldLayer.visible = !OldLayer.visible;
+						}
+						/*NewLayer.visible = !NewLayer.visible;
+						OldLayer.visible = !OldLayer.visible;*/
+						document.getElementById("ageDisplay").innerHTML = "18-20";
+					})
+					
+			    });
+				view.then(function(){
+
+					document.querySelector('#toggleAge2').addEventListener('click', function(){
+						if(NewLayer.visible == true){
+							NewLayer.visible = !NewLayer.visible;
+							OldLayer.visible = !OldLayer.visible;
+							
+							/* cant figure out how to get the route's to toggle with layers
+							if(routeLayer2.visible = true){
+								routeLayer2.visible = false;
+								routeLayer.visible = true;
+							}
+							else{
+								routeLayer2.visible = false;
+								routeLayer.visible = false;
+							}*/
+						}
+						document.getElementById("ageDisplay").innerHTML = "21+";
+					})
+					
+			    });
+			    
+			    
+			});
+			//get day of week
+			/*function getDay() {
+			    var d = new Date();
+			    var weekday = new Array(7);
+			    weekday[0] = "Sunday";
+			    weekday[1] = "Monday";
+			    weekday[2] = "Tuesday";
+			    weekday[3] = "Wednesday";
+			    weekday[4] = "Thursday";
+			    weekday[5] = "Friday";
+			    weekday[6] = "Saturday";
+			
+			    var n = weekday[d.getDay()];
+			    
+			    //document.getElementById("demo").innerHTML = n;
+			}*/
+			
+			
+			
+			/*view.then(function(){
+				var d = new Date();
+			    var weekday = new Array(7);
+			    weekday[0] = "Sunday";
+			    weekday[1] = "Monday";
+			    weekday[2] = "Tuesday";
+			    weekday[3] = "Wednesday";
+			    weekday[4] = "Thursday";
+			    weekday[5] = "Friday";
+			    weekday[6] = "Saturday";
+			
+			    var n = weekday[d.getDay()];
+			    
+			    for(i=2, i < fieldInfos.length, i++){
+				    if(n.equalsIgnoreCase(fieldInfos[i.fieldName])){
+					    fieldInfos[i].visible;
+				    }
+			    }
+			})*/
+			
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<ul class="menu">
+			<li><a><span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776;</span></a></li>
+			<li><a>Northgate Bar Map</a></li>
+			<li><a id="toggleRoute">Best Bar-hop Route</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Age</a>
+				<div class="dropdown-content">
+					<a id="toggleAge1">18-20</a>
+					<a id="toggleAge2">21+</a>
+				</div>
+			</li>
+			<li><a id="ageDisplay">21+</a></li>
+		</ul>
+		
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<ul>
+				<li><a href="#">Bar Golf</a></li>
+				<li><a href="#">Tipsy Turtle</a></li>
+				<li><a href="#">O'Bannon's</a></li>
+				<li><a href="#">Dry Bean Saloon</a></li>
+			</ul>
+			
+			<!--<div class="clear"></div>-->
+		</div>
+		<div id="NGMap"></div>
+		
+	</body>
+	
+</html>

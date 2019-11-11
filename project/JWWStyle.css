@@ -1,0 +1,93 @@
+body {
+	background-image: url("giphy.gif");
+	background-image: repeating-linear-gradient();
+	
+}
+.menu {
+    list-style-type: none;
+    top: 0;
+    left:0;
+    margin: 0;
+    padding: 0;
+    background-color: #800005;
+    position: relative;
+    font-family: Impact, Charcoal, cursive;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	/*flex-direction: column;*/
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
+}
+li {
+    float: left;
+}
+li a {
+    display: inline-block;
+    color: #818181;
+    text-align: center;
+	padding: 14px 16px;
+    text-shadow: 4px 2px #ff0000;
+}
+
+li a:hover {
+    background-color: #b30000;
+    color: 	black;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.57);
+}
+
+.sidenav {
+	height: 75%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 49px;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top:60px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	border-radius: 5px;
+}
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 18px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 100px;
+}
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+#barNames {
+	color: white;
+	font-size: 45px;
+    border: 1px groove red;
+    align-content: center;
+    text-shadow: 4px 2px #FFFF00;
+    
+}
+#scores {
+	color: white;
+	font-size: 45px;
+    border: 1px dashed rgba(249, 182, 182, 0.8);
+    align-content: center;
+    text-shadow: 2px 2px #9ACD32;
+    
+}
+
+#slideTitle {
+	text-shadow: 4px 2px #1ee4de;
+}
