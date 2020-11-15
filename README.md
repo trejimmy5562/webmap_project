@@ -1,19 +1,15 @@
 # Northgate Bar Locations,
 Specials and Routes
 
-Team Leader: Kayla Davis, kayladawndavis@gmail.com
-Other members: Jimmy Barnett, trejimmy5562@tamu.edu
-               Zach Johnson, zachjohnson@tamu.edu
-
-What do you want your web map and/or app to do?
-  INTERACTIVE ELEMENTS
-    We will include popups on each bar detailing:
-        Bar names
-        Age requirements
-        Specials
-        Attractions
-        Address & Coordinates
-  ROUTE TRACKER
+All code here was written by Jimmy Barnett for a project with group members 
+###INTERACTIVE ELEMENTS
+We will include popups on each bar detailing:
+    * Bar names
+    * Age requirements
+    * Specials
+    * Attractions
+    * Address & Coordinates
+###ROUTE TRACKER
     We plan to add a route function that calculates a route to go to as
     many bars as possible in as short of a time as possible.
         Route for 18-20 year olds
