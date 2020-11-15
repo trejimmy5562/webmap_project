@@ -6,24 +6,25 @@ All code here was written by Jimmy Barnett for a project with group members
 
 ### INTERACTIVE ELEMENTS
 
-We will include popups on each bar detailing:
-* Bar names
-* Age requirements
-* Specials
-* Attractions
-* Address & Coordinates
+    Map includes popups on each bar detailing:
+    * Bar names
+    * Age requirements
+    * Specials
+    * Attractions
+    * Address/Coordinates
 ### ROUTE TRACKER
     We plan to add a route function that calculates a route to go to as
     many bars as possible in as short of a time as possible.
-        Route for 18-20 year olds
-        Route for 21 year olds
+        * Route for 18-20 year olds
+        * Route for 21 year olds
     Similar to google maps routing but fixed route for best NG bar
     hopping route.
-  BASE MAP
+    
+### BASE MAP
      We plan on doing one similar to Aggiemap
-        2D is all that's necessary
-        Building outlines
-        Adding bathrooms and roads
+        * 2D is all that's necessary
+        * Building outlines
+        * Adding bathrooms and roads
         
 What does a "successful" web map and/or app do?
   Ease of use – user-friendly interface with clear icons and functions
