@@ -4,11 +4,11 @@ Specials and Routes
 All code here was written by Jimmy Barnett for a project with group members 
 ###INTERACTIVE ELEMENTS
 We will include popups on each bar detailing:
-    * Bar names
-    * Age requirements
-    * Specials
-    * Attractions
-    * Address & Coordinates
+* Bar names
+* Age requirements
+* Specials
+* Attractions
+* Address & Coordinates
 ###ROUTE TRACKER
     We plan to add a route function that calculates a route to go to as
     many bars as possible in as short of a time as possible.
