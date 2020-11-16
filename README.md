@@ -11,25 +11,20 @@ All code here was written by Jimmy Barnett for a project with group members
         * Specials
         * Attractions
         * Address/Coordinates
-### ROUTE TRACKER
-    Plan to add a responsive route function that calculates a route to go to as
-    many bars as possible in as short of a time as possible, or with variable input parameters.
-        * Route for 18-20 year olds
-        * Route for 21 year olds
-    Similar to google maps routing but fixed(?) route for best NG bar
-    hopping route.
-    
+
 ### BASE MAP
-     We plan on doing one similar to Aggiemap
+      Basemap is a clean, minimal streets map to easily navigate directions and distances
         * 2D is all that's necessary
         * Building outlines
-        * Adding bathrooms and roads
+        * Adding bathrooms and roads would be useful
         
-What does a "successful" web map and/or app do?
-  Ease of use – user-friendly interface with clear icons and functions
-  Working interactive elements which provide useful information
-  Working routes which provide a clear route through NG
-  Separate tabs for different users, I.e. one tab for 18-20, one for 21+.
+### ROUTE TRACKER
+        Plan to add a responsive route function that calculates a route to go to as
+        many bars as possible in as short of a time as possible, or with variable input parameters.
+            * Route for 18-20 year olds
+            * Route for 21 year olds
+        Similar to google maps routing but fixed(?) route for best NG bar
+        hopping route.
 
 What is your minimum viable product?
   2D map with routes and interactive elements for each bar. No user
