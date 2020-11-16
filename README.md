@@ -37,7 +37,8 @@ Specials and Routes
       
 ### Software Engineering:
     Leaflet.js library was used.
-      The interactive elements and routes were added using JS, like the onclick hamburger menu, routes, and popups
+      The interactive elements and routes were added using JS, like the onclick hamburger menu, 
+      routes, and popups
       The basemap would be used in html, and the content of the interactive menus and popups
       The style of each popup, route, and menu would be done in CSS
       
