@@ -1,9 +1,6 @@
 # Northgate Bar Locations
 Specials and Routes
 
-All code here was written by Jimmy Barnett for a project with group members
-
-
 ### INTERACTIVE ELEMENTS
     Map includes popups on each bar detailing:
         * Bar names
@@ -19,40 +16,21 @@ All code here was written by Jimmy Barnett for a project with group members
         * Adding bathrooms and roads would be useful
         
 ### ROUTE TRACKER
-        Plan to add a responsive route function that calculates a route to go to as
-        many bars as possible in as short of a time as possible, or with variable input parameters.
-            * Route for 18-20 year olds
-            * Route for 21 year olds
-        Similar to google maps routing but fixed(?) route for best NG bar
-        hopping route.
+    Plan to add a responsive route function that calculates a route to go to as
+    many bars as possible in as short of a time as possible, or with variable input parameters.
+        * Route for 18-20 year olds
+        * Route for 21 year olds
+    Similar to google maps routing but fixed(?) route for best NG bar
+    hopping route.
 
-What is your minimum viable product?
-  2D map with routes and interactive elements for each bar. No user
-  issues and working elements.
-
-What other web maps and/or apps do the same thing as yours?
-  Google maps: has many of the same features: a 2D basemap, walking
-  routes, and interactive elements for buildings
-
-  Aggiemap: very close to our proposed final product. 2D basemap with
-  building information, routes, bathroom locations, popups. 
-
-How is yours different or better?
-  Ours will be better because I propose we have less
-  features/interactive elements. In my opinion these occasionally
-  overload the user, so perhaps separating the user elements into
-  easy-to-identify folders and adding less interactive elements so that
-  routes/bathrooms/bars are easily found and distinguished, as
-  opposed to aggiemap which has extensive layers and options which
-  can be overwhelming and not user-friendly.
   
  Design: Will be similar to aggiemap
       2D buildings instead of shadowed/simulated 3D
       Routes highlighted
       Hamburger menu:
-          1. toggle routes
-          2. switch between age groups
-          3. locate bathrooms
+1. toggle routes
+2. switch between age groups
+3. locate bathrooms
       Interactive bar popups when clicked
       
   Software Engineering:
@@ -92,3 +70,5 @@ How is yours different or better?
       GPS battery
       Coding errors
       Problems integrating different functions into same map
+
+All code here was written by Jimmy Barnett for a project with group members
