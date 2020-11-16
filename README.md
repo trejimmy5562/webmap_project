@@ -3,34 +3,36 @@ Specials and Routes
 
 ### INTERACTIVE ELEMENTS
     Map includes popups on each bar detailing:
-        * Bar names
-        * Age requirements
-        * Specials
-        * Attractions
-        * Address/Coordinates
+        • Bar names
+        • Age requirements
+        • Specials
+        • Attractions
+        • Address/Coordinates
 
 ### BASE MAP
       Basemap is a clean, minimal streets map to easily navigate directions and distances
-        * 2D is all that's necessary
-        * Building outlines
-        * Adding bathrooms and roads would be useful
+        • 2D is all that's necessary
+        • Building outlines
+        • Adding bathrooms and roads would be useful
         
 ### ROUTE TRACKER
     Plan to add a responsive route function that calculates a route to go to as
     many bars as possible in as short of a time as possible, or with variable input parameters.
-        * Route for 18-20 year olds
-        * Route for 21 year olds
+        • Route for 18-20 year olds
+        • Route for 21 year olds
     Similar to google maps routing but fixed(?) route for best NG bar
     hopping route.
 
   
- Design: Will be similar to aggiemap
+  ### Design: 
+
+Interactive web map similar to google maps layout
       2D buildings instead of shadowed/simulated 3D
       Routes highlighted
       Hamburger menu:
-1. toggle routes
-2. switch between age groups
-3. locate bathrooms
+      1. toggle routes
+      2. switch between age groups
+      3. locate bathrooms
       Interactive bar popups when clicked
       
   Software Engineering:
