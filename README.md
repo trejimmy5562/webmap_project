@@ -42,33 +42,24 @@ Specials and Routes
       The basemap would be used in html, and the content of the interactive menus and popups
       The style of each popup, route, and menu would be done in CSS
       
-  Data:
-      Building locations & shape
+### Data:
+      Building locations & shape/outline
       Specials at bars
       Bar age requirement
       
-  Computing:
-      A mixture of html, Javascript and CSS would probably be the main requirements of making this web map.
+### Computing:
+    A mixture of html, Javascript and CSS are the main language requirements of making this web map.
       Not much data processing would be needed as the map and routes would be static and the information unchanging.
-      
-  Project Managment:
-      Data collection will be done by all members split into areas. Create a cohesive map of each building 
-      and important features (bathrooms)
-
-      Coding will be done in parts, with interactive elements and routes
-      being split by age and each done by a separate member of the group.
-
-      Finally will be consolidated and tested
   
-  Testing:
-      All group members will test map on separate computers
-      Contract friends to try to use on their own devices + give feedback
-      Evaluate and fix any errors/confusing elements
-      At least 20 people to test it
+### Testing:
+      All group members tested map on separate computers
+      Contracted friends to use on their own devices + give feedback
+      Evaluate and fixed any errors/confusing elements evaluated
+      Got at least 20 people to test it
       Use every feature in test, attempt to navigate map without assistance
-      If users find features easily, understand what they are looking at, can navigate without assistance and errors it is a success.
+      If users find features easily, understand what they are looking at, can navigate without assistance and errors it is a success
   
-  Potential Issues:
+### Potential Issues:
       GPS accuracy of buildings
       GPS battery
       Coding errors
