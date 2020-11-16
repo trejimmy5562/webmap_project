@@ -24,20 +24,20 @@ Specials and Routes
     hopping route.
 
   
-  ### Design: 
+### Design: 
 
-Interactive web map similar to google maps layout
+    Interactive web map similar to google maps layout
       2D buildings instead of shadowed/simulated 3D
       Routes highlighted
       Hamburger menu:
-      1. toggle routes
-      2. switch between age groups
-      3. locate bathrooms
+      • toggle routes
+      • switch between age groups
+      • locate bathrooms
       Interactive bar popups when clicked
       
-  Software Engineering:
-      Leaflet would be a useful library to use.
-      The interactive elements and routes would be added using JS, like the onclick hamburger menu, routes, and popups
+### Software Engineering:
+    Leaflet.js library was used.
+      The interactive elements and routes were added using JS, like the onclick hamburger menu, routes, and popups
       The basemap would be used in html, and the content of the interactive menus and popups
       The style of each popup, route, and menu would be done in CSS
       
